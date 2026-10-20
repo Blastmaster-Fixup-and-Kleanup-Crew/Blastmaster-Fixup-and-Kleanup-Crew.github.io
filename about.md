@@ -1,6 +1,8 @@
+---
 layout: page
 title: "About"
-permaling: /about
+permalink: /about
+---
 
 # Welcome to the BFKC Site!
 Please wait a second, we WILL have this website up in a few moments, this website is under construction...
