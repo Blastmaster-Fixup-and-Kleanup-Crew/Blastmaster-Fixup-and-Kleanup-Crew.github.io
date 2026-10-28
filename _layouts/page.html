@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | default: site.github.repository_name | escape }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; --ink: #172033; --muted: #536176; --accent: #2457c5; --line: #dce4ef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f9fc; color: var(--ink); font-family: "Libre Franklin", sans-serif; line-height: 1.65; }
+    .site-header { background: #fff; border-bottom: 1px solid var(--line); }
+    .site-header-inner { align-items: center; display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; margin: 0 auto; max-width: 1120px; padding: .85rem 1.25rem; }
+    .site-brand { color: var(--ink); font-size: 1rem; font-weight: 700; text-decoration: none; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .site-nav a { border-radius: 8px; color: var(--muted); font-size: .92rem; font-weight: 500; padding: .55rem .85rem; text-decoration: none; }
+    .site-nav a:hover, .site-nav a:focus-visible { background: #f0f4fc; color: var(--accent); outline-offset: 3px; }
+    .site-nav a[aria-current="page"] { background: #e9efff; color: #2149a4; font-weight: 600; }
+    main { margin: 0 auto; max-width: 1120px; padding: clamp(1rem, 4vw, 2.5rem) 1.25rem 3rem; }
+    main > h1:first-child { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.035em; line-height: 1.2; }
+    .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; margin: 0 auto; max-width: 1120px; padding: 1.25rem; }
+    a:focus-visible { outline: 3px solid #f0b429; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title | default: "BFKC" | escape }}</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about' | relative_url }}"{% if page.url == '/about' or page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <span>© {{ site.time | date: "%Y" }} {{ site.title | default: "BFKC" | escape }}.</span>
+  </footer>
+</body>
+</html>
