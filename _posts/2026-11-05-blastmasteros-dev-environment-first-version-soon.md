@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BlastmasterOS Dev Environment releases its first version soon"
-date: 2026-11-05 12:00:00 -0500
+date: 2026-11-05 18:49:38 -0500
 author: "Blastmaster Fixup & Kleanup Crew"
 description: "The first release of the BlastmasterOS Dev Environment is in development. Learn about its RosBE foundation, supported platforms, and role in building BlastmasterOS."
 categories:
