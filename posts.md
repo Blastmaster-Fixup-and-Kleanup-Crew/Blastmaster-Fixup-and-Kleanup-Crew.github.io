@@ -21,18 +21,20 @@ permalink: /posts/
 .posts-empty { background:#fff; border:1px dashed #cbd5e1; border-radius:14px; color:#536176; margin-top:2rem; padding:1.5rem; }
 </style>
 
-{% assign published_posts = site.posts | where_exp: "post", "post.published != false" %}
-{% if published_posts.size > 0 %}
-  <div class="posts-list">
-    {% for post in published_posts %}
+{% assign post_count = 0 %}
+<div class="posts-list">
+  {% for post in site.posts %}
+    {% unless post.published == false %}
+      {% assign post_count = post_count | plus: 1 %}
       <article class="post-card">
         <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} · {{ post.author | escape }}{% endif %}</p>
         <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
         <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
       </article>
-    {% endfor %}
-  </div>
-{% else %}
+    {% endunless %}
+  {% endfor %}
+</div>
+{% if post_count == 0 %}
   <div class="posts-empty">
     <strong>No posts have been published yet.</strong>
     <p>Check back for announcements, project updates, and news.</p>
