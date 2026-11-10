@@ -22,10 +22,10 @@ CMake is an important part of the development toolchain. It is a build-system ge
 
 ## CMake has successfully compiled
 
-After continuing the build with `make -j9`, the CMake build completed without reporting errors. The resulting executable is located at:
+After continuing the build with `make -j9`, the CMake build completed without reporting errors. The resulting executable is:
 
 ```text
-/home/jmgagnon30/BosDE/build-i386/cmake-build/bin/cmake.exe
+cmake.exe
 ```
 
 We checked the executable and confirmed its reported version:
@@ -50,19 +50,9 @@ The build then continued without errors, leading to the successful CMake version
 
 ## The next integration step
 
-The CMake build output is currently under:
+The CMake executable has been built successfully. The intended next step is to install it into the BosDE RosBE environment.
 
-```text
-/home/jmgagnon30/BosDE/build-i386/cmake-build
-```
-
-The intended installation destination in the BosDE environment is:
-
-```text
-/home/jmgagnon30/BosDE/build-i386/RosBE
-```
-
-The successful build is an important milestone, but building the executable and installing it into the final RosBE location are separate steps. We are continuing the integration work as BosDE takes shape.
+The successful build is an important milestone, but building the executable and installing it into the final RosBE environment are separate steps. We are continuing the integration work as BosDE takes shape.
 
 ## Building BosDE one tool at a time
 
