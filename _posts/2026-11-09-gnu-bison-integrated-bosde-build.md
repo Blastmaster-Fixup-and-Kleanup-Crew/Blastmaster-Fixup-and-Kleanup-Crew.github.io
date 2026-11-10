@@ -25,7 +25,7 @@ Bison is a parser generator used by build tools and software projects to turn gr
 The installed executable is available in the i386 RosBE build environment. We verified it directly with:
 
 ```bash
-/home/jmgagnon30/BosDE/build-i386/RosBE/bin/bison --version
+bison --version
 ```
 
 The version check reports:
@@ -44,8 +44,8 @@ The toolchain build is being driven with the following command:
 
 ```bash
 bash RosBE-Windows/Buildtoolchain/buildtoolchain-mingw32.sh \
-  /home/jmgagnon30/BosDE/sources \
-  /home/jmgagnon30/BosDE/build-i386 \
+  <sources-directory> \
+  <build-directory> \
   1 0 0 0 0 0 0
 ```
 
