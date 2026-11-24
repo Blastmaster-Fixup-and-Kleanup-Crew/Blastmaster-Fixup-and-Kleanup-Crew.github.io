@@ -1,0 +1,46 @@
+---
+layout: page
+---
+<link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+<div class="wiki-shell">
+  <aside class="wiki-sidebar" aria-label="Wiki navigation">
+    <a class="wiki-home-link" href="{{ '/wiki/' | relative_url }}">📚 Wiki home</a>
+    <label class="wiki-search-label" for="wiki-search">Search the Wiki</label>
+    <input id="wiki-search" class="wiki-search" type="search" placeholder="Search articles…" autocomplete="off">
+    <p id="wiki-search-status" class="wiki-search-status" aria-live="polite"></p>
+    <nav class="wiki-nav">
+      <p class="wiki-nav-heading">START HERE</p>
+      <a href="{{ '/wiki/getting-started' | relative_url }}">Getting started</a>
+      <a href="{{ '/wiki/about-bfkc' | relative_url }}">About BFKC</a>
+      <a href="{{ '/wiki/projects' | relative_url }}">Projects overview</a>
+      <p class="wiki-nav-heading">PROJECTS</p>
+      <a href="{{ '/wiki/blastmasteros' | relative_url }}">BlastmasterOS</a>
+      <a href="{{ '/wiki/blastmasterserver' | relative_url }}">BlastmasterServer</a>
+      <a href="{{ '/wiki/bosde' | relative_url }}">BosDE</a>
+      <a href="{{ '/wiki/bosde-windows' | relative_url }}">BosDE on Windows</a>
+      <p class="wiki-nav-heading">HELP & COMMUNITY</p>
+      <a href="{{ '/wiki/troubleshooting' | relative_url }}">Troubleshooting</a>
+      <a href="{{ '/wiki/faq' | relative_url }}">Frequently asked questions</a>
+      <a href="{{ '/wiki/contributing' | relative_url }}">Contributing</a>
+      <a href="{{ '/wiki/glossary' | relative_url }}">Glossary</a>
+      <a href="{{ '/wiki/roadmap' | relative_url }}">Roadmap & status</a>
+    </nav>
+    <a class="wiki-back-link" href="{{ '/' | relative_url }}">← Back to BFKC website</a>
+  </aside>
+  <article class="wiki-article">
+    <div class="wiki-breadcrumb"><a href="{{ '/wiki/' | relative_url }}">Wiki</a><span aria-hidden="true">/</span><span>{{ page.title | escape }}</span></div>
+    <header class="wiki-article-header">
+      <p class="wiki-kicker">BFKC KNOWLEDGE BASE</p>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.description %}<p class="wiki-description">{{ page.description | escape }}</p>{% endif %}
+      <p class="wiki-meta">BFKC documentation <span aria-hidden="true">·</span> <span>Last reviewed: {{ page.last_reviewed | default: "November 24, 2026" }}</span></p>
+    </header>
+    <div class="wiki-prose">{{ content }}</div>
+    <footer class="wiki-article-footer">
+      <p>Found something unclear or outdated?</p>
+      <a href="https://github.com/Blastmaster-Fixup-and-Kleanup-Crew/Blastmaster-Fixup-and-Kleanup-Crew.github.io/issues">Suggest a Wiki correction on GitHub</a>
+      <p class="wiki-disclaimer">Project details can change. Check the linked repository for the latest source code and development status.</p>
+    </footer>
+  </article>
+</div>
+<script src="{{ '/js/wiki.js' | relative_url }}" defer></script>
