@@ -8,7 +8,7 @@ permalink: /
   <p style="color:#2457c5;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Blastmaster Fixup &amp; Kleanup Crew</p>
   <h1 style="font-family:'Libre Franklin',sans-serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:700;letter-spacing:-.045em;line-height:1.15;margin:.5rem 0 1rem;">Welcome to BFKC</h1>
   <p style="color:#536176;font-size:1.15rem;max-width:720px;">We build and explore software projects spanning desktop productivity, operating systems, document tools, and virtualization.</p>
-  <p><a href="{{ '/about' | relative_url }}" style="background:#2457c5;border-radius:9px;color:white;display:inline-block;font-weight:600;padding:.7rem 1rem;text-decoration:none;">About BFKC</a></p>
+  <p><a href="{{ '/wiki/' | relative_url }}" style="background:#172033;border-radius:9px;color:white;display:inline-block;font-weight:600;padding:.7rem 1rem;text-decoration:none;margin-right:.5rem;">Explore the Wiki</a> <a href="{{ '/about' | relative_url }}" style="background:#2457c5;border-radius:9px;color:white;display:inline-block;font-weight:600;padding:.7rem 1rem;text-decoration:none;">About BFKC</a></p>
 </section>
 
 ## Explore
