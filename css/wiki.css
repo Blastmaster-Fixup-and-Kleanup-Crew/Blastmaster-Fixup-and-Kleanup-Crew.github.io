@@ -46,3 +46,6 @@
 .wiki-landing a:focus-visible,.wiki-tile:focus-visible{outline:3px solid #f0b429;outline-offset:3px}
 @media(max-width:800px){.wiki-shell{grid-template-columns:1fr;gap:1rem}.wiki-sidebar{position:static;max-height:none}.wiki-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.wiki-nav-heading{grid-column:1/-1}.wiki-article{padding:1.2rem}}
 @media(prefers-reduced-motion:reduce){.wiki-tile{transition:none}}
+
+/* Ensure filtered search results stay hidden even when component styles are applied. */
+[hidden] { display: none !important; }
